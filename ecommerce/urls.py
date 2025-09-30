@@ -25,5 +25,5 @@ urlpatterns = [
     path("" , views.index,name='index'),   # home page
 
     path("<int:pk>/" , views.detail,name='detail'),   # product detail page
-
+    path("checkout/" , views.checkout,name='checkout'),   # checkout page
 ]
