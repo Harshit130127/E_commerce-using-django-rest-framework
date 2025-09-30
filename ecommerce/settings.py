@@ -55,7 +55,7 @@ ROOT_URLCONF = "ecommerce.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR ,'templates'],
+        "DIRS": [BASE_DIR ,'templates'],   # global templates directory
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -115,15 +115,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "static/"   # URL to use when referring to static files located in STATIC_ROOT.
 
 
 STATICFILES_DIRS= [
     BASE_DIR,"static",
-]
+]   # for development only
 
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'   # Absolute filesystem path to the directory that will hold user-uploaded files.
+MEDIA_URL = '/media/'   # URL that handles the media served from MEDIA_ROOT, used for managing stored files.
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

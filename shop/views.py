@@ -30,5 +30,5 @@ def index (request):
 
 
 def detail (request,pk):
-    product=Product.objects.get(pk=pk)
-    return render(request,'shop/detail.html',{'product':product})
+    product=Product.objects.get(pk=pk)   # get the product with the given primary key
+    return render(request,'shop/detail.html',{'product':product})   # render the product detail page with the product context
